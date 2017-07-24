@@ -1,0 +1,364 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 22px;
+    font-family: sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+html, body, span, a, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    background: black;
+}
+
+#content-wrapper {
+    width: calc(100% - 100px);
+    height: calc(100% - 200px);
+    padding: 50px 0 20px 100px;
+}
+
+#content-wrapper > div {
+    clear: both;
+}
+
+#header-wrapper {
+    height: 60px;
+}
+
+#header-wrapper > div {
+    float: left;
+}
+
+#header-wrapper .left-hwrapper {
+    float: left;
+    width: 240px;
+    line-height: 34px;
+}
+
+#header-wrapper .left-hwrapper img {
+    float: left;
+    padding: 0 10px 0 0;
+}
+
+#header-wrapper .header-date {
+    font-size: 18px;
+    display: block;
+}
+
+#header-wrapper .header-time {
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+
+#header-wrapper .center-hwrapper {
+    height: 40px;
+    width: calc(100% - 480px);
+    font-size: 18px;
+    margin: 22px 10px 0;
+}
+
+#header-wrapper .dayline > div {
+    width: 7%;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#header-wrapper .dayline .today,
+#header-wrapper .dayline .tomorrow {
+    width: 18%;
+}
+
+#header-wrapper .current .dline {
+    background: #ff0a11;
+}
+
+#header-wrapper .dline {
+    background: #2f2f2f;
+    height: 6px;
+    height: 6px;
+    margin: 10px 0 0;
+}
+
+#header-wrapper .right-hwrapper {
+    float: right;
+    width: 200px;
+    font-size: 36px;
+}
+
+#middle-wrapper {
+    margin: 30px 0 0;
+}
+
+#middle-wrapper .service-name {
+    width: 200px;
+}
+
+#middle-wrapper .time-cursor {
+    border: 1px solid red;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+    opacity: 0.6;
+}
+
+#middle-wrapper .time-cursor .time-pick {
+    background: red none repeat scroll 0 0;
+    height: 7px;
+    width: 2px;
+}
+
+#middle-wrapper .service-name,#middle-wrapper .time-block {
+    height: 34px;
+}
+
+#middle-wrapper .service-name span {
+    font-size: 22px;
+}
+
+#middle-wrapper .time-block span {
+    display: inline-block;
+    width: 400px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#middle-wrapper .main-block {
+    clear: both;
+}
+
+#middle-wrapper .left-wrapper {
+    float: left;
+    width: 240px;
+    margin: 5px 0 0;
+}
+
+#middle-wrapper .channel.current,#middle-wrapper .program-tizer {
+    height: 175px;
+    visibility: visible;
+}
+
+#middle-wrapper .channel {
+    height: 30px;
+    padding: 10px;
+    background: #272828;
+    margin: 0 0 10px;
+    position: relative;
+}
+
+#middle-wrapper .channel.current {
+    background: #6b6b6b;
+}
+
+#middle-wrapper .channel.paid {
+    background: #404040;
+}
+
+#middle-wrapper .channel-info {
+    float: left;
+    height: 40px;
+}
+
+#middle-wrapper .channel-number {
+    font-size: 20px;
+}
+
+#middle-wrapper .channel-logo {
+    float: right;
+}
+
+#middle-wrapper .channel .channel-name {
+	display: none;
+}
+
+#middle-wrapper .channel.current .channel-name {
+    display: block;
+    text-align: center;
+    line-height: 80px;
+    clear: both;
+	float: none;
+	margin: 0;
+}
+
+#middle-wrapper .programs-wrapper {
+    position: relative;
+    width: 19200px;
+}
+
+#middle-wrapper .programs-wrapper .channel-programs {
+    height: 50px;
+    margin: 0 0 10px 0;
+    clear: both;
+}
+
+#middle-wrapper .programs-wrapper .program {
+    width: 250px;
+    height: 30px;
+    background: #272828;
+    padding: 10px;
+    float: left;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+#middle-wrapper .programs-wrapper .program-fill {
+    height: 30px;
+    float: left;
+}
+
+#middle-wrapper .programs-wrapper .program-name {
+    white-space: nowrap;
+}
+
+#middle-wrapper .programs-wrapper .fadeout-block {
+    background: url("../img/fadeOut.png") repeat-y;
+    height: 50px;
+    right: 0;
+    width: 20px;
+	position: absolute;
+    top: 0;
+}
+
+#middle-wrapper .programs-wrapper .program.current {
+    border: 5px solid #fff;
+    margin: 0;
+}
+
+#middle-wrapper .programm-tizerwrapper {
+    height: 145px;
+}
+
+#middle-wrapper .programm-tizer {
+    padding: 15px 60px 0 15px;
+    float: left;
+    height: 130px;
+    min-width: 600px;
+    max-width: 70%;
+    position: fixed;
+    left: 340px;
+}
+
+#middle-wrapper .programm-tizer img {
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+#middle-wrapper .programm-tizer .programm-tizername {
+    font-size: 22px;
+}
+
+#middle-wrapper .programm-tizer .programm-time {
+    color: #bababa;
+    line-height: 35px;
+}
+
+#middle-wrapper .programm-tizer .programm-description {
+    height: 2rem;
+    overflow: hidden;
+}
+
+#middle-wrapper .center-wrapper {
+    float: left;
+    margin: 0 0 0 5px;
+    width: calc(100% - 245px);
+    position: relative;
+    overflow: hidden;
+}
+
+#middle-wrapper .main-block {
+    font-size: 18px;
+    overflow: hidden;
+    height: 70vh;
+    width: 100%;
+}
+
+#bottom-wrapper {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+#bottom-wrapper .center-hwrapper span {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding: 0 0 0 30px;
+    margin: 0 15px 0 0;
+    font-size: 20px;
+    line-height: 26px;
+    display: inline-block;
+}
+
+#bottom-wrapper .center-hwrapper .tasks-list {
+    background-image: url("../img/tasksList.png");
+}
+
+#bottom-wrapper .center-hwrapper .settime-now {
+    background-image: url("../img/setTimeNow.png");
+	cursor: pointer;
+}
+
+#bottom-wrapper .center-hwrapper .channels-list {
+    background-image: url("../img/channelsList.png");
+}
+
+#bottom-wrapper .center-hwrapper .prev-day {
+    background-image: url("../img/prevDay.png");
+}
+
+#bottom-wrapper .center-hwrapper .next-day {
+    background-image: url("../img/nextDay.png");
+}
+
+#bottom-wrapper .center-hwrapper .prev-day,
+#bottom-wrapper .center-hwrapper span.next-day {
+    height: 17px;
+    width: 25px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#bottom-wrapper .center-hwrapper span.change-day {
+    padding: 0;
+}
+
+#bottom-wrapper .center-hwrapper span.buy-channel {
+    background-image: url("../img/ok.png");
+}
+
+#bottom-wrapper .center-hwrapper span.search {
+    background-image: url("../img/searchIcon.png");
+}
+
+.spinner-wrapper {
+    background: #000 none repeat scroll 0 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 30;
+}
+
+.spinner {
+    width: 64px;
+    height: 64px;
+    background: url("../img/spinner.gif");
+    position: absolute;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+}
+
+.clearFix {
+    clear: both;
+}
